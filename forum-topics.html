@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="forum-page">
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--link rel="stylesheet" href="css/materialize.css">
+    <script type="text/javascript" src="js/materialize.js"></script-->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-storage.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MyDiabetes | Conversations</title>
+</head>
+
+<body>
+
+    <!--div id="nav-placeholder" class="navbar-fixed">
+    </!--div-->
+
+    <div class="forum-chat">
+        <div class="sidebar">
+            <div class="side-header">
+                <p>
+                    <b><a href="" id="forum-category-head" class="grey-text text-darken-4"></a></b>
+                </p>
+                <!--i class="material-icons grey-text text-darken-2">more_vert</!--i-->
+            </div>
+            <div class="sub-header">
+                <a class="btn-floating btn-medium waves-effect waves-light white modal-trigger" href="#addTopic">
+                    <i class="material-icons grey-text text-darken-2">add</i>
+                </a>
+                <span class="button-text">New topic</span>
+            </div>
+            <div class="topics">
+                <ul id="topic-list">
+
+                </ul>
+            </div>
+        </div>
+        <div class="messages">
+            <nav>
+                <div class="nav-wrapper blue darken-3">
+                    <a id="topic-header-text" class="brand-logo">No topic selected</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a><i class="material-icons">more_vert</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="conversation">
+                <ul class="conversation-content" id="conversation-content">
+
+                </ul>
+
+                <div class="text-input-container">
+                    <input id="text-message" class="z-depth-4" type="text" placeholder="Write message...">
+                    <a id="btnSend" class="btn-floating btn-medium waves-effect waves-dark white">
+                        <i class="material-icons grey-text text-darken-2">send</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="addTopic" class="modal">
+        <div class="modal-content">
+            <h5 class="blue-text text-darken-4">Add a topic</h5>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" class="validate" id="name" placeholder="Topic name">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a id="btnAdd" class="modal-close waves-effect waves-green btn-flat">Add</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/scripts.js "></script>
+    <script type="text/javascript" src="js/pages/forum-topics.js "></script>
+</body>
+
+</html>

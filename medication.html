@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--link rel="stylesheet" href="css/materialize.css">
+        <script type="text/javascript" src="js/materialize.js"></script-->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-storage.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MyDiabetes | Medication</title>
+</head>
+
+<body>
+
+    <div id="nav-placeholder" class="navbar-fixed">
+    </div>
+
+    <div class="container">
+        <h3 class="center cyan-text text-darken-3">
+            <span><img src="images/icons/pill.png" class="header-icons"></span> Medicine
+        </h3>
+
+        <div class="action">
+            <a class="cyan darken-3 waves-effect waves-light btn modal-trigger" href="#addMedicine">
+                <i class="material-icons left">add</i> Add new medicine
+            </a>
+        </div>
+
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th class="right">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="medicine-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="addMedicine" class="modal">
+        <div class="modal-content">
+            <h5 class="cyan-text text-darken-3">Add new medicine</h5>
+            <div class="row">
+                <div class="col s12">
+                    <input type="text" class="validate" id="name" placeholder="Medicine name">
+                </div>
+                <div class="col s12">
+                    <textarea rows="4" id="description" style="resize: none;" placeholder="Description"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-red btn-flat">Cancel</a>
+            <a id="btnAdd" class="modal-close waves-effect waves-green btn-flat">Add</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/pages/medication.js"></script>
+</body>
+
+</html>

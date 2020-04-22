@@ -1,0 +1,62 @@
+<!-- Dropdown Structure -->
+<ul id='extrasdropdown' class='dropdown-content'>
+    <li>
+        <a href="medication.html" class="grey-text text-darken-4">Meds</a>
+    </li>
+    <li>
+        <a href="diet.html" class="grey-text text-darken-4">Diet</a>
+    </li>
+    <li>
+        <a href="exercise.html" class="grey-text text-darken-4">Exercise</a>
+    </li>
+</ul>
+
+<nav class="white">
+    <div class="nav-wrapper">
+        <a href="home.html" class="brand-logo blue-text text-darken-4 center">
+            <img class="navbar-image" src="images/logo/bah_logo.jpg" alt="BAH logo"> Blantyre Adventist Hospital
+        </a>
+        <ul>
+            <li>
+                <a href="appointment.html" class="grey-text text-darken-4">Appointments</a>
+            </li>
+            <!--li>
+                <a href="diagnosis.html" class="grey-text text-darken-4">Diagnosis</a>
+            </li-->
+            <li>
+                <a href="community.html" class="grey-text text-darken-4">Community</a>
+            </li>
+            <!--li>
+                <a class="dropdown-trigger grey-text text-darken-4" href="#!" data-target="extrasdropdown">
+                    Extras<i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li-->
+        </ul>
+        <ul class="right">
+            <li>
+                <a id="userIdentity" href="account.html" class="grey-text text-darken-4"></a>
+            </li>
+            <li>
+                <a class="btn white grey-text text-darken-4 waves-effect waves-dark" id="btnLogout" onclick="logOut()"><b>Logout</b></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    let currentUserEmail = document.getElementById('userIdentity');
+
+
+    $(document).ready(function() {
+
+        $('.dropdown-trigger').dropdown();
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                currentUserEmail.innerHTML = user.email;
+                //email.value = 'Ron';
+            } else {
+
+            }
+        });
+    });
+</script>

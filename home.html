@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--link rel="stylesheet" href="css/materialize.css">
+        <script type="text/javascript" src="js/materialize.js"></script-->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-storage.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MyDiabetes | Home</title>
+</head>
+
+<body>
+
+    <div id="nav-placeholder" class="navbar-fixed">
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h4 class="grey-text text-darken-3">Appointments
+                <a class="right btn blue darken-4 white-text" href="appointment.html">View all</a>
+            </h4>
+            <div class="collection">
+                <a onclick="setAppointmentPage('pending')" class="collection-item amber-text text-darken-3">
+                    <span id="pending_apt" class="new badge amber"></span>
+                    <b>Pending</b>
+                </a>
+                <a onclick="setAppointmentPage('accepted')" class="collection-item green-text text-darken-3">
+                    <span id="accepted_apt" class="badge grey-text text-darken-4"></span>
+                    <b>Accepted</b>
+                </a>
+                <a onclick="setAppointmentPage('declined')" class="collection-item red-text text-darken-3">
+                    <span id="declined_apt" class="badge grey-text text-darken-4"></span>
+                    <b>Declined</b>
+                </a>
+            </div>
+            <h5 class="grey-text text-darken-3">Today</h5>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                    </tr>
+                </thead>
+
+                <tbody id="apt_table">
+                </tbody>
+            </table>
+            <div class="divider"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/pages/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--link rel="stylesheet" href="css/materialize.css">
+    <script type="text/javascript" src="js/materialize.js"></script-->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-storage.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MyDiabetes | Login</title>
+</head>
+
+<body>
+
+    <div class="valign-wrapper row login-box">
+        <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+
+            <div>
+                <div class="card-content">
+                    <div class="center-align">
+                        <img class="logo-image center-align" src="images/logo/bah_logo.jpg" alt="BAH logo">
+                    </div>
+                    <span class="card-title center-align">MyDiabetes | Doctor Login</span>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="userEmail">Email address</label>
+                            <input type="email" class="validate" id="userEmail">
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="userPassword">Password</label>
+                            <input type="password" class="validate" id="userPassword">
+                        </div>
+                        <label class="col s12">
+                                <input type="checkbox" id="showPassword" onclick="showPassword()">
+                                <span for="showPassword">Show Password</span>
+                            </label>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a id="btnLogin" class="btn blue darken-4 white-text waves-effect waves-light">
+                        <b>Login</b>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+        window.onload = function() {
+            checkLoginStatusIndex();
+        }
+
+        const loginEmail = document.querySelector('#userEmail');
+        const loginPassword = document.querySelector('#userPassword');
+        const btn = document.querySelector('#btnLogin');
+
+        btn.addEventListener('click', e => {
+            if (loginEmail.value === '' || loginPassword.value === '') {
+                alert("Fill in all fields")
+            } else {
+                loginUser(loginEmail.value, loginPassword.value);
+            }
+        });
+    </script>
+</body>
+
+</html>

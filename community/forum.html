@@ -1,0 +1,86 @@
+<h4>
+    Choose a category
+</h4>
+<div class="divider"></div>
+
+<div id="categories">
+    <div class="row">
+        <div class="col s4">
+            <div class="card-panel blue darken-4 center z-depth-2 options" onclick="loadCategory('general')">
+                <span class="white-text">
+                    <img src="../images/icons/wgeneral.png" width="100" alt="" class="responsive-img">
+                    <br>
+                    <b>General Topics</b>
+                </span>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel blue darken-4 center z-depth-2 options" onclick="loadCategory('latest')">
+                <span class="white-text">
+                    <img src="../images/icons/wlatest.png" width="100" alt="" class="responsive-img">
+                    <br>
+                    <b>Latests</b>
+                </span>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel red darken-4 center z-depth-2 options" onclick="loadCategory('blood')">
+                <span class="white-text">
+                    <img src="../images/icons/wblood.png" width="100" alt="" class="responsive-img">
+                    <br>
+                    <b>Blood Sugar</b>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s4">
+            <div class="card-panel light-green accent-4 center z-depth-2 options" onclick="loadCategory('activity')">
+                <span class="white-text">
+                    <img src="../images/icons/wactivity.png" width="100" alt="" class="responsive-img">
+                    <br>
+                    <b>Activities</b>
+                </span>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel orange darken-1 center z-depth-2 options" onclick="loadCategory('diet')">
+                <span class="white-text">
+                    <img src="../images/icons/wfood.png" width="100" alt="" class="responsive-img">
+                    <br>
+                    <b>Diet Planning</b>
+                </span>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card-panel cyan darken-3 center z-depth-2 options" onclick="loadCategory('medication')">
+                <span class="white-text">
+                    <img src="../images/icons/wpill.png" width="100" alt="" class="responsive-img">
+                    <br>
+                    <b>Medication</b>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.materialboxed').materialbox();
+        $('.modal').modal();
+    });
+
+    // Load the right page and set it up
+    function loadCategory(category) {
+        // Store the chosen category and load the page containing the topics
+        // The topics will be based on the category chosen
+        if (localStorage) {
+            localStorage.setItem("categoryName", category);
+        } else {
+            $.cookies.set("categoryName", category);
+        }
+
+        window.location = "forum-topics.html";
+    }
+</script>

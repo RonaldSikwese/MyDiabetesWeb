@@ -1,0 +1,102 @@
+<h4>
+    Latest news
+    <a class="btn blue darken-4 right">New post</a>
+</h4>
+<div class="divider"></div>
+
+<div id="posts">
+    <div id="post">
+        <div class="row">
+            <div class="col s1">
+                <img src="../images/icons/forum.png" width="50" alt="" class="circle responsive-img">
+            </div>
+            <div class="col s8">
+                <h6><b>John Doe</b></h6>
+            </div>
+            <div class="col s3">
+                <h6>
+                    <span id="post-date">17 December 2019</span>
+                    <span id="post-time">18:30.31</span>
+                </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s5">
+                <img class="materialboxed responsive-img" src="images/sample.jpg">
+            </div>
+            <div class="col s7">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+            </div>
+        </div>
+        <div class="row center">
+            <a class="btn-floating btn waves-effect waves-light red">
+                <i class="material-icons">favorite</i>
+            </a>
+            <a class="btn-floating btn waves-effect waves-light red">
+                <i class="material-icons">favorite_border</i>
+            </a>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+    <div id="post">
+        <div class="row">
+            <div class="col s1">
+                <img src="../images/icons/forum.png" width="50" alt="" class="circle responsive-img">
+            </div>
+            <div class="col s8">
+                <h6><b>John Doe</b></h6>
+            </div>
+            <div class="col s3">
+                <h6>
+                    <span id="post-date">17 December 2019</span>
+                    <span id="post-time">18:30.31</span>
+                </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+            </div>
+        </div>
+        <div class="row center">
+            <a class="btn-floating btn waves-effect waves-light red">
+                <i class="material-icons">favorite</i>
+            </a>
+            <a class="btn-floating btn waves-effect waves-light red">
+                <i class="material-icons">favorite_border</i>
+            </a>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+</div>
+
+<div id="declineAppointment" class="modal">
+    <div class="modal-content">
+        <h5 class="grey-text text-darken-3 center">Decline Appointment</h5>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="reason">Reason</label>
+                <input type="text" class="validate" name="reason" id="reason">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat">Cancel</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Decline</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.materialboxed').materialbox();
+        $('.modal').modal();
+    });
+</script>

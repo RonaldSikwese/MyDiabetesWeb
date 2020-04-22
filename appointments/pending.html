@@ -1,0 +1,55 @@
+<h4 class="center">Pending appointments</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Reason</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody id="pending_table">
+    </tbody>
+</table>
+
+<div id="acceptAppointment" class="modal">
+    <div class="modal-content">
+        <h5 class="grey-text text-darken-3 center">Accept Appointment</h5>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="notes">Notes</label>
+                <input type="text" class="validate" name="notes" id="notes">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-close waves-effect waves-red btn-flat">Cancel</a>
+        <a id="btnAccept" class="modal-close waves-effect waves-green btn-flat">Accept</a>
+    </div>
+</div>
+
+<div id="declineAppointment" class="modal">
+    <div class="modal-content">
+        <h5 class="grey-text text-darken-3 center">Decline Appointment</h5>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="reason">Reason</label>
+                <input type="text" class="validate" name="reason" id="reason">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-close waves-effect waves-red btn-flat">Cancel</a>
+        <a id="btnDecline" class="modal-close waves-effect waves-green btn-flat">Decline</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.modal').modal();
+    });
+</script>
+
+<script type="text/javascript" src="js/pages/appointment-pending.js"></script>
